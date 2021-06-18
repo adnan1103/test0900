@@ -3,11 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
+import TerraceProvider from '../src/helpers/ContextProvider'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+<React.StrictMode>
+  <TerraceProvider>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </TerraceProvider>
+</React.StrictMode>,
   document.getElementById('root')
 );
 
